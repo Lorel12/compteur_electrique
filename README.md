@@ -40,22 +40,5 @@ Ce projet propose une solution intelligente pour automatiser le relevé d’inde
 
 ---
 
-## 📁 Arborescence du projet
-
-lecteur-compteur/
-│
-├── app.py # Application Flask principale
-├── best.pt # Modèle YOLOv8 pour détection des zones
-├── cnn_digit_segment.pt # Modèle CNN pour chiffres 7 segments
-├── requirements.txt
-├── README.md
-│
-├── templates/
-│ ├── index.html # Page d'accueil
-│ └── result.html # Résultat après traitement
-│
-├── static/
-│ └── uploads/ # Images téléversées
-
 
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
