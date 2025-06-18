@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultat</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            padding: 30px;
+            text-align: center;
+            color: #333;
+        }
+
+        .result-box {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+
+        img {
+            max-width: 90%;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .value {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .facture {
+            margin-top: 30px;
+            background: #f1f9f1;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #d4e8d4;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>📈 Résultats de l’analyse</h1>
+        <p class="label">Index détecté :</p>
+        <p class="value">{{ index }}</p>
+
+        <p class="label">Numéro de compteur :</p>
+        <p class="value">{{ compteur }}</p>
+
+        <div class="facture">
+            <p class="label">💰 Facture estimée :</p>
+            <p class="value">{{ montant }}</p>
+        </div>
+
+        <h3>📷 Image originale :</h3>
+        <img src="{{ image_path }}" alt="Image d'entrée">
+
+        <h3>🔍 Index détecté avec surlignage :</h3>
+        <img src="{{ index_image }}" alt="Index détecté">
+
+        <div style="margin-top: 20px;">
+            <a href="{{ facture_path }}" download target="_blank" style="color: green;">📄 Télécharger la facture (PDF)</a>
+        </div>
+
+        <a href="/">🔁 Retour à l’accueil</a>
+    </div>
+</body>
+</html>
